@@ -126,6 +126,10 @@ const Home = ({ searchParams }) => {
     setrenderseacrh(true);
     
   };
+  const removecookies=()=>{
+    Cookies.remove('clientCode')
+    router.replace('/login')
+  }
   const handleSearchKeyUp = (e) => {
     if (e.key === "Enter") {
       rendersearch();
@@ -138,10 +142,10 @@ const Home = ({ searchParams }) => {
 
 else if (contacts){
 return <>
-<div className="ml-32 flex flex-col justify-center items-center h-screen ">
+<div className="sm:ml-32 flex flex-col justify-center items-center h-screen ">
 <h1 className="text-white text-4xl text-center">You are not a registered user for this website for registaration click the below button and send me your email and name.</h1>
 
-<WhatsAppButton onClick={()=>router.replace('/login')} className="text-white border-2 border-solid border-white rounded-full "/>
+<WhatsAppButton onClick={removecookies} className="text-white border-2 border-solid border-white rounded-full "/>
 </div>
 </> }
 
