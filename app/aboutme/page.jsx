@@ -7,6 +7,7 @@ import { FaUser } from "react-icons/fa";
 
 const Aboutme = () => {
   const token = Cookies.get("clientCode");
+  console.log('hai its me')
   const [profile, setprofile] = useState({});
   const [counter, setcounter] = useState(0)
   const [isloading,setisloading] = useState(false)
