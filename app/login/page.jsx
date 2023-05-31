@@ -1,6 +1,7 @@
 "use client"
 import Cookies from 'js-cookie'
 import './index.css'
+import { useEffect } from 'react';
 
 export default function Login() {
   const clientId = 'ec4e043c5b454f50b248c49f1cda2189';
@@ -25,6 +26,10 @@ const scope=[
     Cookies.set('jwt_token','ec4e043c5b454f50b248c49f1cda21',{expires: 7})
     redirectToAuthCodeFlow(clientId)
   }
+  useEffect(()=>{
+    Cookies.remove('clientCode')
+
+  },[])
     
   
 
