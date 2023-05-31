@@ -8,6 +8,7 @@ import Search from "@/components/Search";
 import { BiSearchAlt } from "react-icons/bi";
 import WhatsAppButton from "@/components/Whatsapp";
 import Loading from "@/components/Loading";
+import { useRouter } from "next/navigation";
 
 const Home = ({ searchParams }) => {
   const clientId = "ec4e043c5b454f50b248c49f1cda2189";
@@ -21,6 +22,7 @@ const Home = ({ searchParams }) => {
   const [searchresults, setsearchresults] = useState({});
   const [contacts, setcontacts] = useState(false)
   const [isloading, setisloading] = useState(false);
+  const router=useRouter()
 
   const renderalbums = async (token) => {
     settoken(token);
@@ -67,17 +69,16 @@ const Home = ({ searchParams }) => {
       
       const searchParams = new URLSearchParams(window.location.search);
     
-    // Get the value of a specific parameter
     const paramValue = searchParams.get("code");
 
-    console.log(paramValue); 
+    
       const url = "https://accounts.spotify.com/api/token";
       const data = new URLSearchParams();
       data.append("grant_type", "authorization_code");
       data.append("client_id", clientId);
       data.append("client_secret", clientSecret);
       data.append("code", paramValue);
-      data.append("redirect_uri", "https://melomix.vercel.app/home");
+      data.append("redirect_uri", "http://localhost:3000/home");
 
       const response = await fetch(url, {
         method: "POST",
@@ -140,7 +141,7 @@ return <>
 <div className="ml-32 flex flex-col justify-center items-center h-screen ">
 <h1 className="text-white text-4xl text-center">You are not a registered user for this website for registaration click the below button and send me your email and name.</h1>
 
-<WhatsAppButton className="text-white border-2 border-solid border-white rounded-full "/>
+<WhatsAppButton onClick={()=>router.replace('/login')} className="text-white border-2 border-solid border-white rounded-full "/>
 </div>
 </> }
 

@@ -21,7 +21,7 @@ router.push('/home/playlist')
       <div className="flex flex-wrap gap-8 sm:gap-12">
 
       {editorspick.items.map((item)=>(
-        <div key={item.id} onClick={()=>handleonclick(item.id)} className="cursor-pointer font-semibold  w-[82px]  sm:w-[166px] sm:h-[166px] h-auto  text-center">
+        <div key={item.id} onClick={()=>handleonclick(item.id)} className="cursor-pointer font-semibold  w-[82px]  sm:w-[166px]  h-auto  text-center">
           <img className="w-[166px] h-[82px] sm:h-[166px] rounded-lg mb-2 sm:mb-4" src={item.images[0].url} alt={item.name}/>
 <p>{item.name}</p>
         </div>

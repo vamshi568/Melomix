@@ -95,12 +95,12 @@ const Genre = () => {
         <BsArrowLeftShort className="text-3xl" /> Back
       </p>
       <h1 className="mt-12 text-2xl font-bold mb-8">Podcast</h1>
-      <div className="flex flex-col  sm:flex-wrap gap-4 sm:gap-12">
+      <div className="flex sm:flex-row flex-col  sm:flex-wrap gap-4 sm:gap-12">
         {details.items.map((item) => (
           <div
             onClick={() => handleonclick(item.id)}
             className="flex sm:flex-col  cursor-pointer items-center gap-2 sm:w-[166px]"
-            key={item.id}
+            key={item.id+Math.random()}
           >
             <img
               className="rounded w-[80px] h-[80px] sm:w-[166px] sm:h-[166px]"

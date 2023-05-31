@@ -161,7 +161,7 @@ const dispatch=useDispatch()
 
 
   return (
-    <div className="w-screen overflow-hidden max-[600px]:p-6 text-white sm:ml-36">
+    <div className="w-screen max-[600px]:p-6 text-white sm:pl-36">
       
         <h1 onClick={()=>router.back()}  className="cursor-pointer items-center flex sm:mt-6 mb-6 font-semibold">
 
@@ -180,7 +180,7 @@ const dispatch=useDispatch()
           <p className="text-[#94A3B8] mt-2">{details.description}</p>
         </div>
       </div>
-      <div className=" grid-cols-6 mb-8 mt-8 sm:grid hidden">
+      <div className=" grid-cols-4 mb-8 mt-8 sm:grid hidden">
         <div className="col-span-2 flex ">
           <p className="w-10"></p>
           <p>Track</p>
@@ -194,7 +194,7 @@ const dispatch=useDispatch()
       <div className="flex flex-col gap-4 mb-20 sm:mb-32 mt-8">
         {details.tracks.items.map((item, indexi) => (
             <>
-          <div onClick={()=>handelsong(details.id,indexi)} key={item.id} className={`${details.id===songid1 && indexi===songindex ? 'bg-[#303030]':null} cursor-pointer max-[600px]:hidden grid items-center grid-cols-6 h-20`}>
+          <div onClick={()=>handelsong(details.id,indexi)} key={item.id+Math.random()} className={`${details.id===songid1 && indexi===songindex ? 'bg-[#303030]':null} cursor-pointer max-[600px]:hidden grid items-center grid-cols-4 h-20`}>
             <div className="col-span-2 flex">
               <p className="ml-4 w-10">{indexi + 1}</p>
               <p >{item.name}</p>
