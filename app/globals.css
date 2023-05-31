@@ -15,13 +15,126 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+* {
+  box-sizing: border-box;
+  margin: 0;
 }
+body {
+  background-color: #181818;
+}
+.iconactive::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 6px;
+  height: 100%;
+
+  background-color: green;
+}
+.iconactivem::before {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0px;
+  width: 100%;
+  height: 6px;
+
+  background-color: green;
+}
+
+.audio-player {
+  display: flex;
+  align-items: center;
+}
+
+.progress-bar-container {
+  position: relative;
+  height: 4px;
+  width: 50vw;
+  background-color: grey;
+  border-radius: 2px;
+  margin: 10px 0;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 100%;
+  appearance: none;
+  background-color: transparent;
+  outline: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.progress-bar::-webkit-slider-thumb {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0px 0px 4px rgba(180, 165, 165, 0.3);
+}
+
+.progress-bar::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.progress-bar::-webkit-slider-thumb:active {
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+}
+
+.progress-bar::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+}
+
+.progress-bar::-moz-range-thumb:hover {
+  transform: scale(1.2);
+}
+
+.progress-bar::-moz-range-thumb:active {
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+}
+
+.progress-bar::-ms-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+}
+
+.progress-bar::-ms-thumb:hover {
+  transform: scale(1.2);
+}
+
+.progress-bar::-ms-thumb:active {
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+}
+
+.progress-bar::-webkit-progress-value {
+  background-color: green;
+  border-radius: 2px;
+}
+
+.progress-bar::-moz-progress-bar {
+  background-color: green;
+  border-radius: 2px;
+}
+
+.progress-bar::-ms-fill {
+  background-color: green;
+  border-radius: 2px;
+}
+
