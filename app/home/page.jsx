@@ -64,6 +64,8 @@ const Home = ({ searchParams }) => {
     const clitecode = Cookies.get("clientCode");
     if (clitecode === undefined) {
       setisloading(true)
+      console.log(searchParams.code)
+      console.log(searchParams)
       const url = "https://accounts.spotify.com/api/token";
       const data = new URLSearchParams();
       data.append("grant_type", "authorization_code");
