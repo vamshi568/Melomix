@@ -64,14 +64,19 @@ const Home = ({ searchParams }) => {
     const clitecode = Cookies.get("clientCode");
     if (clitecode === undefined) {
       setisloading(true)
-      console.log(searchParams.code)
-      console.log(searchParams)
+      
+      const searchParams = new URLSearchParams(window.location.search);
+    
+    // Get the value of a specific parameter
+    const paramValue = searchParams.get("code");
+
+    console.log(paramValue); 
       const url = "https://accounts.spotify.com/api/token";
       const data = new URLSearchParams();
       data.append("grant_type", "authorization_code");
       data.append("client_id", clientId);
       data.append("client_secret", clientSecret);
-      data.append("code", searchParams.code);
+      data.append("code", paramValue);
       data.append("redirect_uri", "https://melomix.vercel.app/home");
 
       const response = await fetch(url, {
