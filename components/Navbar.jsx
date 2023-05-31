@@ -13,7 +13,7 @@ import Cookies from "js-cookie";
 const Navbar = () => {
   const [show, setShow] = useState(false);
   const [bgcolor, setcolor] = useState("home");
-  const [menu, setmenu] = useState(false);
+  const [menu, setmenu] = useState(true);
   const activeStyle = {
     color: "#fff",
     backgroundColor: "#181818",

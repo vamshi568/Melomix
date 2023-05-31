@@ -388,7 +388,7 @@ setnewplaylist(false)
   }
 
   return (
-    <div className="audio-player max-[600px]:flex max-[600px]:flex-col max-[600px]:border-t-[1px] z-30 max-[600px]:border-solid border-[#9B9B9B] h-fit min-h-[100px] sm:min-h-[110px] fixed bottom-0 w-screen bg-black flex justify-center left-0">
+    <div className="audio-player max-[600px]:flex max-[600px]:flex-col max-[600px]:border-t-[1px] z-30 max-[600px]:border-solid border-[#9B9B9B] h-fit min-h-[100px] sm:min-h-[110px] fixed bottom-0 w-screen bg-black flex justify-center max-[600px]:px-3 left-0">
      <div className="flex justify-between">
 
     
