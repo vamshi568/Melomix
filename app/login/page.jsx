@@ -15,7 +15,7 @@ const scope=[
       const params = new URLSearchParams();
       params.append("client_id", clientId);
       params.append("response_type", "code");
-      params.append("redirect_uri", "http://localhost:3000/home");
+      params.append("redirect_uri", "https://melomix.vercel.app/home");
       params.append("scope", scope);    
       window.location.href = `https://accounts.spotify.com/authorize?${params.toString()}`;
     };
