@@ -4,7 +4,7 @@ import './index.css'
 
 export default function Login() {
   const clientId = 'ec4e043c5b454f50b248c49f1cda2189';
-  const redirectUri = 'https://melomix.vercel.app/home/';
+  const redirectUri = 'https://melomix.vercel.app/home';
 const scope=[
     "user-read-email","user-read-private", "playlist-read-private","user-read-playback-state","user-read-currently-playing","streaming","user-library-modify"
     ,"user-library-read","user-read-playback-position",
