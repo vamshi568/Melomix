@@ -392,7 +392,7 @@ setnewplaylist(false)
      <div className="flex justify-between">
 
     
-       {!newplaylist ?<div className="text-white w-[250px] gap-4 flex items-center">
+       {!newplaylist ?<div className="text-white sm:w-[250px] gap-4 flex items-center">
       <img
           className="rounded-sm h-[40px] w-[40px] sm:h-[60px] sm:w-[60px]"
           src={details.tracks.items[songindex].track.album.images[0].url}
@@ -405,7 +405,7 @@ setnewplaylist(false)
         
           </div>
       </div>: !seacrchres?
-      <div className="text-white w-[250px] gap-4 flex items-center">
+      <div className="text-white sm:w-[250px] gap-4 flex items-center">
       <img
           className="rounded-sm h-[60px] w-[60px]"
           src={details.images[0].url}
@@ -416,7 +416,7 @@ setnewplaylist(false)
         <p className="text-[#9B9B9B] text-xs">{details.tracks.items[songindex].artists[0].name}</p>
           </div>
       </div>
-      :<div className="text-white w-[250px] gap-4 flex items-center">
+      :<div className="text-white sm:w-[250px] gap-4 flex items-center">
       <img
           className="rounded-sm h-[60px] w-[60px]"
           src={details.album.images[0].url}
