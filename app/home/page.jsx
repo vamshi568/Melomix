@@ -78,7 +78,7 @@ const Home = ({ searchParams }) => {
       data.append("client_id", clientId);
       data.append("client_secret", clientSecret);
       data.append("code", paramValue);
-      data.append("redirect_uri", "https://melomix.vercel.app/home");
+      data.append("redirect_uri", "http://localhost:3000/home");
 
       const response = await fetch(url, {
         method: "POST",
