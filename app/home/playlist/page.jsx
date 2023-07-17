@@ -261,10 +261,10 @@ const dispatch=useDispatch()
           <div onClick={()=>handelsong(details.id,indexi)} key={item.id} className={`${details.id===songid1 && indexi===songindex ? 'bg-[#303030]':null} cursor-pointer max-[600px]:hidden grid items-center grid-cols-6 h-20`}>
             <div className="col-span-2 flex">
               <p className="ml-4 w-10">{indexi + 1}</p>
-              <p >{item.track.name}</p>
+              <p >{item.track.name.length>40?item.track.name.slice(0,40)+'...':item.track.name}</p>
             </div>
-            <div className="col-span-4 grid grid-cols-4">
-              <p>{item.track.album.name}</p>
+            <div className="col-span-4 grid grid-cols-4 ">
+              <p >{item.track.album.name.length>40?item.track.album.name.slice(0,40)+'...':item.track.album.name}</p>
               <p>{formatTime(item.track.duration_ms)}</p>
               <p>{item.track.artists[0].name}</p>
               <p>{formatDate(item.added_at)}</p>
