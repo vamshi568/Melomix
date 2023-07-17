@@ -400,8 +400,8 @@ setnewplaylist(false)
         />
         <div className="">
       <h1 className="text-white font-bold text-sm sm:text-base">{details.tracks.items[songindex].track.name}</h1>
-        <p className="text-[#cbcbcb] max-[600px]:hidden font-semibold text-sm"> {details.tracks.items[songindex].track.album.name}</p>
-        <p className="text-[#9B9B9B] text-xs">{details.tracks.items[songindex].track.artists[0].name}</p>
+        <p className="text-[#cbcbcb] max-[600px]:hidden font-semibold text-sm"> {details.tracks.items[songindex].track.album.name.slice(0,17)}...</p>
+        <p className="text-[#9B9B9B] text-xs">{details.tracks.items[songindex].track.artists[0].name.slice(0,12)}...</p>
         
           </div>
       </div>: !seacrchres?
@@ -438,10 +438,10 @@ setnewplaylist(false)
             <FaPlay className="text-2xl sm:text-5xl"  />
             )}
             </button>
-        {!seacrchres && <MdSkipNext className="text-2xl sm:text-5xl sm:mr-8" onClick={onnext} />}
+        {!seacrchres && <MdSkipNext className="text-2xl sm:text-5xl" onClick={onnext} />}
       </div>
       </div>
-      <div className="audio-player ">
+      <div className="audio-player ml-8">
         <audio
           ref={audioRef} 
           src={url}
@@ -451,7 +451,6 @@ setnewplaylist(false)
           onPause={handlePause}
           onTimeUpdate={handleTimeUpdate}
           onEnded={handleSongEnded}
-          className=""
         />
         <div className="progress-bar-container max-[600px]:w-screen  h-7 ">
           <input

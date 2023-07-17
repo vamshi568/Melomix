@@ -95,7 +95,7 @@ const Genre = () => {
         <BsArrowLeftShort className="text-3xl" /> Back
       </p>
       <h1 className="mt-12 text-2xl font-bold mb-8">Podcast</h1>
-      <div className="flex sm:flex-row flex-col  sm:flex-wrap gap-4 sm:gap-12">
+      <div className="flex sm:flex-row flex-col mb-24 sm:flex-wrap gap-4 sm:gap-12">
         {details.items.map((item) => (
           <div
             onClick={() => handleonclick(item.id)}
@@ -108,10 +108,10 @@ const Genre = () => {
               alt={item.id}
             />
             <div >
-            <h1 className="font-bold sm:mt-4 text-base sm:text-[20px] text-center">
+            <h1 className="font-bold sm:mt-4 text-base sm:text-[20px] sm:text-center">
               {item.name}
             </h1>
-            <p className="text-[#64748B] mb-1 text-sm sm:text-[18px] ">
+            <p className="text-[#64748B] mb-1 text-sm sm:text-[18px] sm:text-center">
               {item.tracks.total} Tracks
             </p>
                 </div>

@@ -197,7 +197,7 @@ const dispatch=useDispatch()
           <div onClick={()=>handelsong(details.id,indexi)} key={item.id+Math.random()} className={`${details.id===songid1 && indexi===songindex ? 'bg-[#303030]':null} cursor-pointer max-[600px]:hidden grid items-center grid-cols-4 h-20`}>
             <div className="col-span-2 flex">
               <p className="ml-4 w-10">{indexi + 1}</p>
-              <p >{item.name}</p>
+              <p>{item.name.length>40?item.name.slice(0,40)+'...':item.name}</p>
             </div>
             <div className="col-span-2 grid grid-cols-2">
               <p>{formatTime(item.duration_ms)}</p>
@@ -206,7 +206,7 @@ const dispatch=useDispatch()
             </div>
           </div>
           <div onClick={()=>handelsong(details.id,indexi)} key={item.id} className={`${details.id===songid1 && indexi===songindex ? 'bg-[#303030]':null} cursor-pointer sm:hidden flex items-center justify-between  h-14`}>
-            <div className="">
+            <div >
               <p >{item.name}</p>
               <p className="text-[#94A3B8] text-xs">{item.artists[0].name}</p>
 

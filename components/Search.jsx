@@ -38,7 +38,7 @@ router.push('/home/playlist')
               src={item.images[0].url}
               alt={item.id}
             />
-            <h1 className="text-base mt-4 mb-1 text-center">{item.name}</h1>
+            <h1 className="text-base mt-4 mb-1 text-center">{item.name.length>30?item.name.slice(0,30)+'...':item.name}</h1>
             <p className="text-[#9B9B9B] text-sm">{item.tracks.total} Tracks</p>
           </div>
         ))}

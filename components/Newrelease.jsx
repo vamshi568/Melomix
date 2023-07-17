@@ -24,7 +24,7 @@ router.push('/home/newplaylist')
       {newresealse.items.map((item)=>(
         <div key={item.id} onClick={()=>handleonclick(item.id)} className="font-semibold cursor-pointer w-[82px]  sm:w-[166px]  h-auto text-center">
         <img className="w-[166px] h-[82px] sm:h-[166px] rounded-lg mb-4" src={item.images[0].url} alt={item.name}/>
-<p>{item.name}</p>
+<p>{item.name.length>30?item.name.slice(0,30)+'...':item.name}</p>
         </div>
       )
       
